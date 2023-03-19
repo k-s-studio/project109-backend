@@ -1,0 +1,44 @@
+package project109.backend.controller;
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.PATCH;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
+import org.jboss.resteasy.annotations.GZIP;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import project109.backend.entity.Good;
+
+@Path("/testx")
+@Controller
+public class TestControllerx {
+
+  private ArrayList<Good> goods = new ArrayList<>();
+  public TestControllerx(){
+    goods.add(new Good("0", "whitecat", 300, true));
+    goods.add(new Good("1", "blackcat", 400, true));
+    goods.add(new Good("2", "nyancat", 77777,true));
+  }
+   
+  @GET
+  @Path("/")
+  public String pathWorking() throws Exception{
+    return "The annotation '@Path' works.";
+  }
+
+  @GET
+  @Path("/user/{name}")
+  public String username( @PathVariable("name") String name="Rick Astley") throws Exception{
+    return String.format("You are %s.", name);
+  }
+}
