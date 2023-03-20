@@ -30,6 +30,7 @@ public class UserController {
     @Autowired
     UserService service;
 
+    @Consumes("application/json")
     @PostMapping("/user/login")
     public LoginToken userLogin(
             @RequestBody LoginDTO dto)

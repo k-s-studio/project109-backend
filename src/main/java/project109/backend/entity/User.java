@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class User {
-    private String loginId;//= Common.CreateRandomId(32);
+    private String loginId=null;//= Common.CreateRandomId(32);
     private String studentId;
-    private String password="";
+    private String password=null;
     private String email="";
     private String name;
     private int level=1;
