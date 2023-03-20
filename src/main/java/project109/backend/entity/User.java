@@ -29,9 +29,8 @@ public class User {
         this.point = point;
         this.currency = currency;
     }
-    //用於傳送用戶取得的資料，密碼不傳
-    public User(String loginId, String studentId, String email, String name, int level, int point, int currency) {
-        this.loginId = loginId;
+    //用於傳送用戶取得的資料，密碼不傳、logonId已經有了
+    public User(String studentId, String email, String name, int level, int point, int currency) {
         this.studentId = studentId;
         this.email = email;
         this.name = name;

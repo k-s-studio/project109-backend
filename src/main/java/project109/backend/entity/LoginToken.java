@@ -6,13 +6,16 @@ import java.util.Objects;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import project109.backend.util.Common;
 
 @Component
 public class LoginToken {
-    private String loginToken = Common.CreateRandomId(16);
-    private String loginId;
-    private String studentId;
+    private String loginToken="";// = Common.CreateRandomId(16);
+    private String loginId="";
+    private String studentId="";
     private String timestamp= "";
 
     public LoginToken() {
@@ -35,7 +38,8 @@ public class LoginToken {
     }
 
     //從client接值用DTO
-    public LoginToken(String loginToken, String loginId){
+    @JsonCreator
+    public LoginToken(@JsonProperty("loginToken") String loginToken, @JsonProperty("loginId") String loginId){
         this.loginToken = loginToken;
         this.loginId = loginId;
     }

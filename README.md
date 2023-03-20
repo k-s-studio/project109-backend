@@ -3,7 +3,7 @@
 * [ ] 在本地伺服器架一個前端(Unity App)送出請求後，對firebase上用戶資料做**多種處理**的後端app
 * [ ] 在本地伺服器架一個前端(Unity App)送出請求後，能**對firebase中一種資料進行CRUD**的後端app
 * [ ] 在本地伺服器架一個**使用firebase api**的後端app
-* [ ] 在本地伺服器運行**可以處理簡單request**後端app
+* [x] 在本地伺服器運行**可以處理簡單request**後端app
   * [ ] 使用HttpRespond型別
   * [ ] 使用javax package
   * [X] 取得網址中{ }的值

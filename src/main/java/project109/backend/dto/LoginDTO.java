@@ -1,22 +1,26 @@
 package project109.backend.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 public class LoginDTO {
-    private String studentId;
-    private String password;
+    @Schema(description = "學號")
+    private String studentId="";
+    @Schema(description = "密碼")
+    private String password="";
 
     public String getStudentId() {
-        return studentId;
+        return this.studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
-    public void setStudentId(String str){
-        this.studentId=str;
-    }
-
-    public void setPassword(String str){
-        this.password=str;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
